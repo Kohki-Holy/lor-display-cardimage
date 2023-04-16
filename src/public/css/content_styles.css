@@ -1,0 +1,137 @@
+.execute_script_wrappaer {
+  position: fixed;
+  bottom: 10%;
+  right: 15px;
+  z-index: 100;
+  padding: 1em 1em;
+}
+
+.execute_script_wrappaer.fadeout {
+  animation: fadeoutRight 0.5s forwards;
+}
+
+.execute_script_wrappaer.fadein {
+  animation: fadeinRight 0.5s forwards;
+}
+
+@keyframes fadeinRight {
+  from {
+    transform: translateX(200px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeoutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+
+.execute_script_wrappaer button {
+  border: 1px solid #272228;
+  border-radius: 5px;
+  padding: 1em 1em;
+  font-size: 0.8em;
+  background-color:#c49250;
+  opacity: 0.8;
+}
+.execute_script_wrappaer button:hover {
+  background-color:#ff9250;
+  opacity: 1;
+}
+
+.ldc-loader-wrap {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+.ldc-loader {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+.ldc-loader:before,
+.ldc-loader:after {
+  content:"";
+  position: absolute;
+  top:0;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 34px;
+  background:#c49250;
+  border: 1px solid #fff;
+  opacity: 90%;
+  animation: 
+    move-white-xy 1.2s infinite linear normal,
+    move-white-z 1.2s infinite linear normal;
+}
+.ldc-loader:after {
+  background:#272228;
+  animation-name: move-red-xy, move-red-z;
+}
+@keyframes move-white-xy {
+  8% {
+    transform: translateX(0) translateY(0);
+  }
+  36% {
+    transform: translateX(70%) translateY(10%);
+  }
+  64% {
+    transform: translateX(-70%) translateY(-10%);
+  }
+  92% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes move-white-z {
+  8% { z-index: 1;}
+  48% { z-index: 2;}
+  88% { z-index: 1;}
+}
+
+@keyframes move-red-xy {
+  8% {
+    transform: translateX(0) translateY(0);
+  }
+  36% {
+    transform: translateX(-70%) translateY(-10%);
+  }
+  64% {
+    transform: translateX(70%) translateY(10%);
+  }
+  92% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes move-red-z {
+  8% { z-index: 2;}
+  48% { z-index: 1;}
+  88% { z-index: 2;}
+}
+
+/* tippy */
+
+.tippy-box {
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
+}
+
+.tippy-content {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+}
+
+.tippy-content > img {
+  display: block !important;
+  width: 240px !important;
+  height: 361.33px !important;
+  flex: 0 0 auto !important;
+}

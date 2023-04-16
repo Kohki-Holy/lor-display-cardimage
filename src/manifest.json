@@ -12,6 +12,14 @@
     "author": {
         "email": "advancezero.ad@gmail.com"
     },
+
+    "content_scripts":[
+        {
+            "matches": ["https://note.com/*"],
+            "css": ["./public/css/content_styles.css"],
+            "run_at" : "document_end"
+        }
+    ],
     "background":{
         "service_worker": "background.js"
     },
