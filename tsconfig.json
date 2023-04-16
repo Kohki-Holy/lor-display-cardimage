@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "lib":[
+      "es2020",
+      "dom"
+    ],
+    "typeRoots": ["node_modules/@types"],
+    "types": [
+      "chrome",
+      "string.prototype.matchall"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
