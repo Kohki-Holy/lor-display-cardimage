@@ -4,5 +4,21 @@
     "version": "1.0.0",
 
     "description": "noteに投稿された『レジェンド・オブ・ルーンテラ』記事の、特定フォーマットで書かれたカード名をマウスオーバーするとカード画像を表示します。",
-    "default_locale": "ja"
+    "author": {
+        "email": "advancezero.ad@gmail.com"
+    },
+    "background":{
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "tabs"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["cards.json"],
+            "matches": ["https://note.com/*"]
+        },
+    ]
 }
