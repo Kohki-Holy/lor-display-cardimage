@@ -68,7 +68,7 @@ const viewCardImage = function( json:CardType[] ){
         arrow: false,
         placement: 'right',
         allowHTML: true,
-        onShow(instance){
+        onCreate(instance){
             const code = instance.reference.getAttribute('data-card-code')
             const set = instance.reference.getAttribute('data-card-set')
             const url = 'https://dd.b.pvp.net/latest/' + set + '/ja_jp/img/cards/' + code + '.png'
