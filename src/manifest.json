@@ -8,6 +8,12 @@
         "48": "./public/images/icon48.png"
     },
 
+    "action":{
+        "default_icon": {
+            "48": "./public/images/icon48.png"
+        },
+        "default_title": "カード画像を表示します！"
+    },
     "author": {
         "email": "advancezero.ad@gmail.com"
     },
