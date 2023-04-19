@@ -33,6 +33,7 @@
         "activeTab",
         "tabs"
     ],
+    "host_permissions": ["https://note.com/*"],
     "web_accessible_resources": [
         {
             "resources": ["cards.json"],
