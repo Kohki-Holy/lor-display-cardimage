@@ -43,7 +43,6 @@ const viewCardImage = function( json:CardType[] ){
 
             const cardText = document.createElement('a')
             cardText.classList.add('lorCardImage')
-            cardText.setAttribute('href', '#')
             cardText.textContent = bracketCard
             cardText.dataset.cardCode = filterdJson[0].id
             cardText.dataset.cardSet = filterdJson[0].set
