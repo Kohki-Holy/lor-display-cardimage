@@ -79,9 +79,4 @@ const viewCardImage = function( json:CardType[] ){
     })
 }
 
-chrome.runtime.sendMessage('hoge')
-
-chrome.runtime.onMessage.addListener( (request :CardType[]) => {
-    const executeScript = document.getElementById("execute")
-    if(executeScript) executeScript.addEventListener('click', ()=> viewCardImage(request) )
-})
+chrome.runtime.onMessage.addListener((request :CardType[]) => viewCardImage(request))
