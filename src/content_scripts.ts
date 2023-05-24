@@ -20,7 +20,7 @@ const viewCardImage = function( json:CardType[] ){
         element.classList.add('added-image')
 
         const html = element.innerHTML
-        const regexp = /(?<bracketName>«(?<cardName>[^»]+?)»)/g
+        const regexp = /(?<bracketName>[«《](?<cardName>[^»》]+?)[»》])/g
         const regexpMatchCardList = html.matchAll(regexp)
 
         Array.from(regexpMatchCardList).forEach( (regexpMatchCard, index) => {
